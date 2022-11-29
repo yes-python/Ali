@@ -20,12 +20,17 @@ def sth(phoneNumber=input('Enter your Phone Number : '), starCount=3):
             phoneNumber = input("Enter your CORRECT phone number: ")
 
             if len(phoneNumber) == 11:
-                # break
                 prefix = phoneNumber[0:4]
                 suffix = phoneNumber[-4::1]
                 starForm = f'{prefix}{bcolors.WARNING}{starCount * "*"}{bcolors.ResetAll}{suffix}'
                 return starForm
             continue
+
+    else:
+        prefix = phoneNumber[0:4]
+        suffix = phoneNumber[-4::1]
+        starForm = f'{prefix}{bcolors.WARNING}{starCount * "*"}{bcolors.ResetAll}{suffix}'
+        return starForm
 
 
 print(sth())
